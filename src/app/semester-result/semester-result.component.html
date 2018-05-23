@@ -1,0 +1,35 @@
+<div fxLayout="row" fxLayoutXs="row" fxLayoutAlign="space-around" fxLayoutGap id="container" class="main">
+    <div fxFlex="99">
+      <mat-tab-group fxHide.xs>
+        
+        <mat-tab label="{{x.level}} Level" *ngFor = "let x of details">
+                <table>
+                  <tr>
+                      <th>COURSE CODE</th><th>COURSE TITLE</th> <th>GRADE</th> <th>UNITS</th> <th>MARKS</th>
+                      <th>GP</th><th>TGP</th>
+                  </tr>
+                    <tr *ngFor = "let detail of x.tab">
+                      <td>{{detail.course_code}}</td><td>{{detail.course_title}}</td><td>{{detail.grade}}</td><td>{{detail.units}}</td><td>{{detail.marks}}</td><td>{{detail.gp}}</td><td>{{detail.tgp}}</td>
+                  </tr>
+                </table>
+                
+        </mat-tab>
+      </mat-tab-group>
+      <mat-tab-group fxHide.gt-xs>
+        
+          <mat-tab label="{{x.level}} Level" *ngFor = "let x of details">
+                  <table>
+                    <tr>
+                        <th>COURSE CODE</th><th>GRADE</th> <th>UNITS</th> <th>MARKS</th>
+                        <th>GP</th><th>TGP</th>
+                    </tr>
+                      <tr *ngFor = "let detail of x.tab">
+                        <td>{{detail.course_code}}<br />{{detail.course_title}}</td><td>{{detail.grade}}</td><td>{{detail.units}}</td><td>{{detail.marks}}</td><td>{{detail.gp}}</td><td>{{detail.tgp}}</td>
+                    </tr>
+                  </table>
+                  
+          </mat-tab>
+          
+        </mat-tab-group>
+      </div>
+</div>

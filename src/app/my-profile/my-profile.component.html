@@ -1,0 +1,135 @@
+<form>
+<div fxLayout="row"  fxLayoutAlign="space-around" fxLayoutGap class="main">
+   <div fxFlex="99">
+       <mat-card>
+        <mat-horizontal-stepper>
+                <mat-step label="PERSONAL INFO">
+                        <mat-form-field id="fname">
+                                <mat-placeholder>
+                                    <mat-icon>account_circle</mat-icon> Last Name
+                                </mat-placeholder>
+                              <input matInput type="text" value="{{studentDetails.lname}}" disabled>
+                            </mat-form-field>
+                
+                            <mat-form-field id="fname">
+                                <mat-placeholder>
+                                    <mat-icon>account_circle</mat-icon> First Name
+                                </mat-placeholder>
+                                <input matInput type="text"value="{{studentDetails.fname}}" disabled>
+                              </mat-form-field>
+                
+                            <mat-form-field id="mname">
+                                <mat-placeholder>
+                                    <mat-icon>account_box</mat-icon> Middle Name
+                                </mat-placeholder>
+                                  <input matInput type="text"value="{{studentDetails.mname}}" disabled>
+                            </mat-form-field>
+                
+                            <mat-form-field style="width:100%">
+                                <mat-placeholder>
+                                    <mat-icon></mat-icon> Date of Birth
+                                </mat-placeholder>
+                                  <input matInput type="date" value="{{studentDetails.dob}}" disabled>
+                            </mat-form-field>
+                
+                            <mat-form-field id="nat">
+                                <mat-select placeholder="Nationality" disabled>
+                                  <mat-option *ngFor="let country of countries" [value]="country.value">
+                                    {{ country.value }}
+                                  </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                
+                            <mat-form-field id="sog">
+                                <mat-select placeholder="State of Origin(for Nigerians)" disabled>
+                                  <mat-option *ngFor="let country of countries" [value]="country.value">
+                                    {{ country.value }}
+                                  </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                
+                            <mat-form-field>
+                                <mat-select placeholder="Gender" disabled>
+                                  <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                    {{ gender.value }}
+                                  </mat-option>
+                
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field>
+                
+                            <mat-select placeholder="Marital Status" disabled>
+                                  <mat-option *ngFor="let marital of maritals" [value]="marital.value">
+                                    {{ marital.value }}
+                                  </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                    <div>
+                        <button type="button" mat-button matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step label="CONTACT INFO">
+                        <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>call</mat-icon> Phone 1
+                                </mat-placeholder>
+                                  <input matInput type="text" value="{{studentDetails.phone1}}" disabled>
+                            </mat-form-field>
+                      
+                            <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>call</mat-icon> Phone 2
+                                </mat-placeholder>
+                                <input matInput type="text" value="{{studentDetails.phone2}}" disabled>
+                            </mat-form-field>
+                      
+                            <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>mail_outline</mat-icon> Email
+                                </mat-placeholder>
+                              <input matInput type="email" value="{{studentDetails.email}}" disabled>
+                            </mat-form-field>
+                      
+                          <mat-form-field>
+                              <mat-placeholder>
+                                  <mat-icon>account_box</mat-icon> Address
+                              </mat-placeholder>
+                            <input matInput type="text" value="{{studentDetails.address}}" disabled>
+                          </mat-form-field>
+                        <div>
+                            <button type="button" mat-button matStepperPrevious>Back</button>
+                            <button type="button" mat-button matStepperNext>Next</button>
+                        </div>
+                </mat-step>
+                <mat-step label="NEXT OF KIN CONTACT INFO">
+                        <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>account_box</mat-icon> Full Name
+                                </mat-placeholder>
+                                  <input matInput type="text" value="{{studentDetails.next_of_kin_name}}" disabled>
+                            </mat-form-field>
+                          
+                            <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>account_box</mat-icon> Office Phone
+                                </mat-placeholder>
+                                <input matInput type="text" value="{{studentDetails.kin_phone}}" disabled>
+                            </mat-form-field>
+                          
+                            <mat-form-field>
+                                <mat-placeholder>
+                                    <mat-icon>mail</mat-icon> Email
+                                </mat-placeholder>
+                              <input matInput type="email" value="{{studentDetails.kin_email}}" disabled>
+                            </mat-form-field>
+                            <div>
+                                <button type="button" mat-button matStepperPrevious>Back</button>
+                                <button mat-button style="background-color:#970F0F;">Save Changes</button>
+                            </div>
+                </mat-step>
+
+        </mat-horizontal-stepper>
+        </mat-card>
+    </div>
+</div>
+</form>

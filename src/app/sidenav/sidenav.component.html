@@ -1,0 +1,34 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()" id="tog"><mat-icon>menu</mat-icon></button>
+    <span></span>
+    <span><a href="#" id="company_name" style.color="{{_companies.color}}"><img src={{_companies.logo}} /><span style="position:relative;top:-9px;">{{_companies.name}}</span></a></span>
+    <span class="fill"></span>
+    <span class="fill"></span>
+    <mat-icon>swap_horiz</mat-icon>&nbsp;&nbsp;&nbsp;
+    <mat-icon>apps</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-icon>notifications</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="assets/images/admin.png" id='passport' />
+</mat-toolbar>
+
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav>
+        <mat-accordion>
+          <mat-expansion-panel *ngFor = "let item of items"  style="box-shadow:none;">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    
+                 <a routerLink="/{{item._name}}"><mat-icon>{{item.icon}}</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.name}}</a> 
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+            <mat-list>
+                <mat-list-item *ngFor="let x of item.sub"><a routerLink="/{{x._name}}">{{x.name}}</a></mat-list-item>
+            </mat-list>
+          </mat-expansion-panel>
+          </mat-accordion>
+      </mat-sidenav>
+      <router-outlet>
+          <section></section>
+       </router-outlet>
+    </mat-sidenav-container>
+    
+    

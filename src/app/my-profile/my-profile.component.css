@@ -1,0 +1,31 @@
+
+mat-form-field{
+    width:100%;
+}
+mat-card{
+    border-radius:8px;
+}
+mat-card-header{
+    background-color:#2E3091;
+    color:#fff;
+}
+mat-card-title{
+    padding:10px 0 10px 0;
+    margin:0;
+}
+mat-placeholder{
+    font-size:0.85em;
+}
+button{
+    background-color:#2E3091;
+    color:#fff;
+}
+
+@media only screen and (min-width:600px){
+    #fname,#lname,#mname,#nat,#sog{
+        width:33%;
+    }
+    #nat,#sog{
+        width:49.5%;
+    }
+}

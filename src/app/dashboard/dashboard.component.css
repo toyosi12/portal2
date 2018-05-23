@@ -1,0 +1,94 @@
+    *{
+        font-family:roboto;
+    }
+    
+    .main h2,.main p{
+        padding:0;
+        margin:0;
+    }
+    .main p{
+        font-weight:lighter;
+    }
+    .sec1 {
+      background: #607D8B;
+      
+    }
+    
+    .sec2 {
+      background: #2196F3;
+    }
+    
+    .sec3 {
+      background:#E91E63;
+    }
+     .sec4 {
+      background: #9C27B0;
+    }
+    .sec1, .sec2, .sec3, .sec4 {
+      text-align:center;
+      color:white;
+    }
+    .sec12, .sec22, .sec32, .sec42{
+      text-align:center;
+      color:white;
+      background-color:#2196F3;
+      
+    }
+    mat-card img{
+      width:100%;
+      height:auto;
+    }
+    .sec32{
+      background-color:#b9afaf;
+    }
+    .sec12{
+      background-color:#99a8af;
+    }
+    .sec22{
+      background-color:#83aaca;
+    }
+    .sec42{
+      background-color:#a8ecb3;
+    }
+
+    .sec12 h3, .sec22 h3,.sec32 h3, .sec42 h3{
+     font-size: 0.9em;
+      
+    }
+    
+    
+    .content {
+     width:100%;
+      /*height: 400px;*/
+    }
+    .actions button{
+      color:#fff;
+    }
+    .actions button{
+      color:#fff;
+    }
+    
+    @media only screen and (max-width:600px){
+      .main{
+        margin:0.8px 4.4px 0.8px 4.4px;
+      }
+      
+      .sec1, .sec2, .sec12, .sec22{
+        margin-bottom:10px;
+      }
+      .sec1, .sec2, .sec3, .sec4, .sec12, .sec22, .sec32, .sec42 {
+       padding:10px;
+      }
+      mat-card h2{
+        font-size: 1em;
+      }
+      mat-card small{
+        font-size:0.7em;
+      }
+      #chart-div{
+        margin-left:8px;
+        margin-right: 8px;
+      }
+    }
+  
+ 

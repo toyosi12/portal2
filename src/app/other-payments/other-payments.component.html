@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutXs="row" fxLayoutAlign="space-around" fxLayoutGap id="container">
+  <div fxFlex="80">
+    <table>
+      <tr>
+          <th>S/N</th> <th>SERVICE AND PRODUCT DESCRIPTION</th> <th>AMOUNT(N)</th>
+      </tr>
+      <tr  *ngFor = "let value of values">
+        <td>{{value.id}}</td><td>{{value.service}}</td><td>{{value.amount}}</td>
+      </tr>
+     
+    </table>
+   
+    <button mat-raised-button style="background-color:#ff0000;color:#fff">Proceed to Payment Page</button>
+    <div fxFlex="40"><br /><br />
+      <img src="assets/images/interswitch.png" id="interswitch" />
+    </div>
+  </div>
+</div>
